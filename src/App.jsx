@@ -21,7 +21,7 @@ function Header() {
         <button>Second</button>
         <button>Third</button>
       </div>
-      <img src="../public/hero3.png" alt="hero image" />
+      <img src="../public/hero2.png" alt="hero image" />
     </header>
   );
 }
