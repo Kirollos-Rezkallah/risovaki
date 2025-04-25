@@ -1,3 +1,4 @@
+import heroImg from "./assets/hero2.png";
 function App() {
   return (
     <div className="container">
@@ -32,7 +33,7 @@ function Header() {
           </Button>
         </div>
       </div>
-      <img src="../public/hero2.png" alt="hero image" />
+      <img src={heroImg} alt="hero image" />
     </header>
   );
 }
