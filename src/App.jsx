@@ -10,19 +10,43 @@ function Header() {
   return (
     <header>
       <div className="header-text-box">
-        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+        <h1>Печатай точно Работай стабильно</h1>
         <p className="header-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-          expedita temporibus voluptatum culpa numquam doloribus nihil fugit. Ex
-          exercitationem blanditiis, molestiae iste nam ad illo est molestias,
-          voluptatem voluptatibus officia?
+          Высокая точность, бесшумная работа и простой запуск — всё, что нужно
+          для эффективной 3D-печати. K10 подходит как новичкам, так и опытным
+          пользователям. Готов к работе сразу из коробки.
         </p>
-        <button>First</button>
-        <button>Second</button>
-        <button>Third</button>
+        <div className="buttons">
+          <Button href={"https://www.ozon.ru/"} bgColor={"var(--color-ozon)"}>
+            ozon
+          </Button>
+          <Button
+            href={"https://www.wildberries.ru/"}
+            bgColor={"var(--color-wildberries)"}>
+            wildberries
+          </Button>
+          <Button
+            href={"https://market.yandex.ru/"}
+            bgColor={"var(--color-yandex)"}>
+            яндекс маркет
+          </Button>
+        </div>
       </div>
       <img src="../public/hero2.png" alt="hero image" />
     </header>
+  );
+}
+
+function Button({ children, href, bgColor }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={"btn"}
+      style={{ backgroundColor: bgColor }}>
+      {children}
+    </a>
   );
 }
 export default App;
