@@ -1,5 +1,5 @@
-import heroImg from "./assets/hero2.png";
-import logoUrl from "./assets/logo.svg";
+import heroImg from "./assets/hero.png";
+import Logo from "./assets/logo.svg?react";
 
 function App() {
   return (
@@ -45,7 +45,8 @@ function Nav() {
   return (
     <>
       <nav aria-label="Primary navigation">
-        <img src={logoUrl} alt="Risovaki logo" className="logo" />
+        <Logo className="logo" />
+        {/* <img src={logoUrl} alt="Risovaki logo" className="logo" /> */}
         <ul>
           <li>
             <a href="#">Главная</a>
