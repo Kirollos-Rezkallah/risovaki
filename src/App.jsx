@@ -44,7 +44,9 @@ function Nav() {
   return (
     <>
       <nav aria-label="Primary navigation">
-        <Logo />
+        <a href="/" aria-label="Go to homepage">
+          <Logo />
+        </a>
         <ul>
           <li>
             <a href="#">Главная</a>
