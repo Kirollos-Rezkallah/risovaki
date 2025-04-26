@@ -49,7 +49,7 @@ coverage/
 
 # Optional: Vercel/Netlify folders
 /.vercel/
-/netlify.toml
+
 
 # Optional: Storybook build
 /storybook-static/
