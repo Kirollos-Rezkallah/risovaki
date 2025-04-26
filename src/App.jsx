@@ -1,7 +1,10 @@
 import heroImg from "./assets/hero2.png";
+import Logo from "./assets/logo.svg?react";
+
 function App() {
   return (
     <div className="container">
+      <Nav />
       <Header />
     </div>
   );
@@ -14,7 +17,7 @@ function Header() {
         <h1>Печатай точно Работай стабильно</h1>
         <p className="header-text">
           Высокая точность, бесшумная работа и простой запуск — всё, что нужно
-          для эффективной 3D-печати. K10 подходит как новичкам, так и опытным
+          для эффективной 3D-печати. K7 подходит как новичкам, так и опытным
           пользователям. Готов к работе сразу из коробки.
         </p>
         <div className="buttons">
@@ -35,6 +38,30 @@ function Header() {
       </div>
       <img src={heroImg} alt="hero image" />
     </header>
+  );
+}
+
+function Nav() {
+  return (
+    <>
+      <nav aria-label="Primary navigation">
+        <Logo className="logo" />
+        <ul>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Загрузки</a>
+          </li>
+          <li>
+            <a href="#">Часто задаваемые вопросы</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
