@@ -41,6 +41,15 @@ body {
   margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+}
+
 /* HEADER */
 
 header {
@@ -63,7 +72,6 @@ h1 {
   line-height: 1.1;
   letter-spacing: -2px;
   margin-bottom: 32px;
-  color: var(--color-primary);
 }
 
 .header-text {
@@ -205,6 +213,10 @@ nav ul li a:active {
 
 /* PRODUCTS CARDS */
 
+.product-cards-section {
+  padding-top: 32px;
+}
+
 .product-cards {
   display: flex;
   justify-content: space-evenly;
@@ -212,12 +224,17 @@ nav ul li a:active {
   background-color: var(--color-background-dark);
   border-radius: 5px;
 }
+
+.product-cards-section h2 {
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
 .product-cards article {
   /* border: 1px solid var(--color-text); */
-  width: 400px;
+  width: 320px;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
   border-radius: 5px;
-  margin-top: 32px;
   background-color: #f9f9f9;
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
   /* slower exit */
@@ -240,7 +257,6 @@ nav ul li a:active {
 .product-details h3 {
   text-align: center;
   margin-bottom: 24px;
-  color: var(--color-primary);
 }
 
 .product-details li {

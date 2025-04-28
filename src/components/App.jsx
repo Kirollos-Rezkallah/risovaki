@@ -9,9 +9,12 @@ function App() {
       <Nav />
       <Header />
       <main>
-        <section id="product-cards" className="product-cards">
-          <ProductCard />
-          <ProductCard />
+        <section id="product-cards" className="product-cards-section">
+          <h2>Выберите свою модель Рисоваки</h2>
+          <div className="product-cards">
+            <ProductCard />
+            <ProductCard />
+          </div>
         </section>
       </main>
     </div>
