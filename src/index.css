@@ -79,17 +79,26 @@ header a {
   text-transform: uppercase;
   font-weight: 500;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 5px;
 }
 
 header a:last-child {
   margin-right: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn {
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  cursor: pointer;
 }
 
 .btn:link,
 .btn:visited {
   font-size: 24px;
-  padding: 5px 10px;
   text-decoration: none;
   color: var(--color-text-light);
 }
@@ -189,4 +198,49 @@ nav ul li a:active {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 32px;
+}
+
+/* PRODUCTS CARDS */
+
+.products-cards {
+  width: 350px;
+}
+.products-cards article {
+  border: 5px solid var(--color-primary);
+}
+
+.product-image {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.product-details h3 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.product-details li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  list-style: none;
+}
+
+.product-details li:last-child {
+  margin-bottom: 24px;
+}
+
+.product-details ul li img {
+  width: 16px;
+}
+
+.product button {
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 64px;
 }
