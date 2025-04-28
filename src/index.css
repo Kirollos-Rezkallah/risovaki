@@ -10,9 +10,11 @@ FONT SIZE SYSTEM (px)
 :root {
   --color-primary: var(--oc-blue-9);
   --color-accent: var(--oc-blue-4);
+  --color-accent-light: var(--oc-blue-1);
   --color-text: var(--oc-gray-9);
   --color-text-light: var(--oc-gray-0);
   --color-background: var(--oc-gray-2);
+
   --color-ozon: var(--oc-indigo-9);
   --color-yandex: var(--oc-yellow-9);
   --color-wildberries: var(--oc-grape-8);
@@ -23,6 +25,7 @@ FONT SIZE SYSTEM (px)
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* GLOBAL STYLES */
@@ -89,7 +92,7 @@ header a:last-child {
 
 .btn {
   font-size: 24px;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   background-color: var(--color-primary);
   color: var(--color-background);
@@ -202,21 +205,42 @@ nav ul li a:active {
 
 /* PRODUCTS CARDS */
 
-.products-cards {
-  width: 350px;
+.product-cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 128px;
+  background-color: var(--color-background-dark);
+  border-radius: 5px;
 }
-.products-cards article {
-  border: 5px solid var(--color-primary);
+.product-cards article {
+  /* border: 1px solid var(--color-text); */
+  width: 400px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  margin-top: 32px;
+  background-color: #f9f9f9;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+  /* slower exit */
+}
+
+.product-cards article:hover {
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+  /* faster entrance */
 }
 
 .product-image {
   width: 100%;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .product-details h3 {
   text-align: center;
   margin-bottom: 24px;
+  color: var(--color-primary);
 }
 
 .product-details li {
@@ -226,10 +250,16 @@ nav ul li a:active {
   gap: 12px;
   margin-bottom: 16px;
   list-style: none;
+  margin-left: 16px;
 }
 
 .product-details li:last-child {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.product-details ul li span {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .product-details ul li img {
@@ -237,10 +267,17 @@ nav ul li a:active {
 }
 
 .product button {
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
   color: var(--color-primary);
   background: none;
   border: none;
   cursor: pointer;
   font-size: 20px;
   margin-left: 64px;
+  padding-bottom: 24px;
+}
+
+.product button:hover {
+  transform: translateY(-2px) scale(1.05);
 }

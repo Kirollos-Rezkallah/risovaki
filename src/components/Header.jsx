@@ -13,7 +13,7 @@ export default function Header() {
           высокой точности. Начните печатать с уверенностью и откройте новые
           возможности творчества.
         </p>
-        <Button href={"#highlight"}>Выбрать модель</Button>
+        <Button href={"#product-cards"}>Выбрать модель</Button>
       </div>
       <img src={heroImg} alt="hero image" />
     </header>

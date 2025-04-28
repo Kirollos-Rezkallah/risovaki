@@ -1,7 +1,7 @@
 import Nav from "./Nav";
 import Header from "./Header";
 import HighlightSection from "./HighlightSection";
-import CardProduct from "./ProductCard";
+import ProductCard from "./ProductCard";
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
       <Nav />
       <Header />
       <main>
-        <section className="products-cards">
+        <section id="product-cards" className="product-cards">
+          <ProductCard />
           <ProductCard />
         </section>
       </main>

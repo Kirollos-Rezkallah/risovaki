@@ -27,7 +27,7 @@ function ProductCard() {
         </ul>
       </div>
 
-      <button>More →</button>
+      <button>Подробнее →</button>
     </article>
   );
 }
