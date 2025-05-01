@@ -15,9 +15,9 @@ function ProductCard({ title, size, weight, plug, power, href }) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="product-icon">
               <path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
               <path d="m14.5 12.5 2-2" />
@@ -35,9 +35,9 @@ function ProductCard({ title, size, weight, plug, power, href }) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="product-icon">
               <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
               <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
@@ -55,9 +55,9 @@ function ProductCard({ title, size, weight, plug, power, href }) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="product-icon">
               <path d="M12 22v-5" />
               <path d="M9 8V2" />
@@ -74,9 +74,9 @@ function ProductCard({ title, size, weight, plug, power, href }) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="product-icon">
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
               <path d="M12.667 8 10 12h4l-2.667 4" />
@@ -85,10 +85,11 @@ function ProductCard({ title, size, weight, plug, power, href }) {
           </li>
         </ul>
       </div>
-
-      <a className="text-button" href={`#${href}`}>
-        Подробнее →
-      </a>
+      <div className="card-link">
+        <a className="text-button" href={`#${href}`}>
+          Подробнее →
+        </a>
+      </div>
     </article>
   );
 }
