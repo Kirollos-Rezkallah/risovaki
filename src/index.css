@@ -8,8 +8,8 @@ FONT SIZE SYSTEM (px)
 
 /* COLOR SYSTEM */
 :root {
-  --color-primary: var(--oc-blue-9);
-  --color-accent: var(--oc-blue-4);
+  --color-primary: var(--oc-cyan-7);
+  --color-accent: var(--oc-orange-8);
   --color-accent-light: var(--oc-blue-1);
   --color-text: var(--oc-gray-9);
   --color-text-light: var(--oc-gray-0);
@@ -18,6 +18,8 @@ FONT SIZE SYSTEM (px)
   --color-ozon: var(--oc-indigo-9);
   --color-yandex: var(--oc-yellow-9);
   --color-wildberries: var(--oc-grape-8);
+
+  --radius-round: 50%;
 }
 
 /* RESET */
@@ -32,7 +34,7 @@ FONT SIZE SYSTEM (px)
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .container {
@@ -41,21 +43,20 @@ body {
   margin: 0 auto;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   color: var(--color-primary);
-}
+} */
 
 /* HEADER */
 
 header {
   display: flex;
-  gap: 30px;
-  margin-bottom: 160px;
+  margin-bottom: 128px;
 }
 
 .header-text-box {
@@ -69,15 +70,16 @@ header img {
 
 h1 {
   font-size: 86px;
-  line-height: 1.1;
-  letter-spacing: -2px;
+  line-height: 1;
   margin-bottom: 32px;
+  font-weight: 800;
+  color: var(--color-primary);
 }
 
 .header-text {
   font-size: 20px;
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .buttons {
@@ -101,7 +103,7 @@ header a:last-child {
 .btn {
   font-size: 24px;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 24px;
   background-color: var(--color-primary);
   color: var(--color-background);
   cursor: pointer;
@@ -136,7 +138,7 @@ nav {
 
 .logo {
   display: inline-block;
-  width: 250px;
+  width: 180px;
   color: var(--color-primary);
 }
 
@@ -165,12 +167,12 @@ nav ul li a:link,
 nav ul li a:visited {
   text-decoration: none;
   color: var(--color-text);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 nav ul li a:hover,
 nav ul li a:active {
-  color: var(--color-primary);
+  color: var(--color-accent);
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -178,10 +180,10 @@ nav ul li a:active {
 
 .highlight {
   height: 350px;
-  background-color: var(--color-primary);
-  border-radius: 8px;
+  background-color: rgba(16, 152, 173, 0.25);
+  border-radius: 24px;
   margin-bottom: 128px;
-  color: var(--color-background);
+  /* color: var(--color-background); */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -190,7 +192,7 @@ nav ul li a:active {
 
 .highlight img {
   height: 300px;
-  border-radius: 6px;
+  border-radius: 24px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -203,6 +205,7 @@ nav ul li a:active {
   line-height: 1.1;
   margin-bottom: 48px;
   padding-top: 24px;
+  color: var(--color-accent);
 }
 
 .highlight p {
@@ -214,7 +217,7 @@ nav ul li a:active {
 /* PRODUCTS CARDS */
 
 .product-cards-section {
-  padding-top: 32px;
+  padding-top: 28px;
 }
 
 .product-cards {
@@ -228,35 +231,36 @@ nav ul li a:active {
 .product-cards-section h2 {
   font-size: 32px;
   line-height: 1.1;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 .product-cards article {
-  /* border: 1px solid var(--color-text); */
-  width: 320px;
+  width: 350px;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
   border-radius: 5px;
   background-color: #f9f9f9;
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-  /* slower exit */
 }
 
 .product-cards article:hover {
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
   transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
-  /* faster entrance */
 }
 
 .product-image {
   width: 100%;
-  padding-bottom: 24px;
+
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
 .product-details h3 {
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  color: var(--color-accent);
 }
 
 .product-details li {
@@ -273,19 +277,21 @@ nav ul li a:active {
   margin-bottom: 32px;
 }
 
-.product-details ul li span {
+.product-text {
   font-size: 18px;
   font-weight: 600;
 }
 
-.product-details ul li img {
-  width: 16px;
+.product-icon {
+  color: var(--color-accent);
+  width: 24px;
+  height: 24px;
 }
 
 .product button {
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s ease;
-  color: var(--color-primary);
+  color: var(--color-accent);
   background: none;
   border: none;
   cursor: pointer;
