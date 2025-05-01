@@ -86,7 +86,9 @@ function ProductCard({ title, size, weight, plug, power, href }) {
         </ul>
       </div>
 
-      <a href={`#${href}`}>Подробнее →</a>
+      <a className="text-button" href={`#${href}`}>
+        Подробнее →
+      </a>
     </article>
   );
 }

@@ -9,13 +9,13 @@ export default function Nav() {
         </a>
         <ul>
           <li>
-            <a href="#">Главная</a>
+            <a href="#risovaki">Рисоваки</a>
           </li>
           <li>
-            <a href="#">Загрузки</a>
+            <a href="#risovaki-pro">Рисоваки Pro</a>
           </li>
           <li>
-            <a href="#">Часто задаваемые вопросы</a>
+            <a href="#downloads">Загрузки</a>
           </li>
           <li>
             <a href="#">Контакты</a>

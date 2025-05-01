@@ -4,6 +4,7 @@ import HighlightSection from "./HighlightSection";
 import ProductCard from "./ProductCard";
 import { printers } from "../product-card-data.js";
 import { printers_highlight } from "../hightlight-data.js";
+import Downloads from "./Downloads.jsx";
 
 function App() {
   return (
@@ -21,8 +22,11 @@ function App() {
         </section>
 
         {printers_highlight.map((printer) => (
-          <HighlightSection key={printer.title} {...printer} />
+          <div id={printer.id} className="padding-top">
+            <HighlightSection key={printer.title} {...printer} id="" />
+          </div>
         ))}
+        <Downloads />
       </main>
     </div>
   );
