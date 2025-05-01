@@ -1,17 +1,27 @@
 import highlightImg1 from "../assets/highlight-img-1.jpg";
+import MarketplaceButtons from "./MarketplaceButtons";
 
-export default function HighlightSection() {
+export default function HighlightSection({
+  title,
+  description,
+  ozonHref,
+  wildberriesHref,
+  yandexHref,
+  id,
+}) {
   return (
-    <section id="highlight" className="highlight">
-      <img src={highlightImg1} alt="First highlight image" />
-      <div className="highlight-text">
-        <h2>Компактный 3D-принтер для начинающих и энтузиастов</h2>
-        <p>
-          EasyThreed K7 — лёгкий, тихий и простой в использовании 3D-принтер.
-          Идеален для домашнего обучения, творчества и DIY-проектов. Простое
-          управление одной кнопкой и бесплатная библиотека моделей для быстрого
-          старта.
-        </p>
+    <section id={id} className="highlight">
+      <h2>{title}</h2>
+      <div className="hightlight-container">
+        <img src={highlightImg1} alt="First highlight image" />
+        <div className="highlight-text">
+          <p>{description}</p>
+          <MarketplaceButtons
+            ozonHref={ozonHref}
+            wildberriesHref={wildberriesHref}
+            yandexHref={yandexHref}
+          />
+        </div>
       </div>
     </section>
   );

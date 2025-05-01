@@ -1,10 +1,10 @@
 import ButtonTarget from "./ButtonTarget";
 
-export default function MarketplaceButtons(
+export default function MarketplaceButtons({
   ozonHref,
   wildberriesHref,
-  yandexHref
-) {
+  yandexHref,
+}) {
   return (
     <div className="buttons">
       <ButtonTarget href={ozonHref} bgColor={"var(--color-ozon)"}>

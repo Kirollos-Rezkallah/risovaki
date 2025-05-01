@@ -1,6 +1,6 @@
 import firstImg from "../assets/highlight-img-1.jpg";
 
-function ProductCard({ title, size, weight, plug, power }) {
+function ProductCard({ title, size, weight, plug, power, href }) {
   return (
     <article className="product">
       <img className="product-image" src={firstImg} alt="img" />
@@ -86,7 +86,7 @@ function ProductCard({ title, size, weight, plug, power }) {
         </ul>
       </div>
 
-      <button>Подробнее →</button>
+      <a href={`#${href}`}>Подробнее →</a>
     </article>
   );
 }
