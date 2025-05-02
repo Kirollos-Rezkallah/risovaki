@@ -27,6 +27,7 @@ export const printers = [
     power: "12В, ≥ 2А (без адаптера)",
     slicer: "Easyware K9",
     href: "risovaki",
+    img: r1,
   },
   {
     title: "Рисоваки Pro", // K7
@@ -36,6 +37,7 @@ export const printers = [
     power: "12В, 30Вт (адаптер в комплекте)",
     slicer: "Easyware K7",
     href: "risovaki-pro",
+    img: rp1,
   },
 ];
 

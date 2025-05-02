@@ -1,9 +1,7 @@
-import firstImg from "../assets/highlight-img-1.jpg";
-
-function ProductCard({ title, size, weight, plug, power, href }) {
+function ProductCard({ title, size, weight, plug, power, href, img }) {
   return (
     <article className="product">
-      <img className="product-image" src={firstImg} alt="img" />
+      <img className="product-image" src={img} alt={title} />
       <div className="product-details">
         <h3>{title}</h3>
         <ul>

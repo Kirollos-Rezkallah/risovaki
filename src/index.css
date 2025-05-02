@@ -198,6 +198,7 @@ nav ul li a:active::after {
   background-color: rgba(176, 151, 252, 0.2);
   border-radius: 24px;
   margin-bottom: 128px;
+  overflow: visible;
 }
 
 .highlight-container {
@@ -207,6 +208,12 @@ nav ul li a:active::after {
   gap: 50px;
   padding: 0 64px;
   padding-top: 32px;
+  overflow: visible;
+}
+
+.highlight-container,
+.highlight {
+  overflow: visible;
 }
 
 .padding-top {
@@ -401,126 +408,45 @@ nav ul li a:active::after {
 .container-slider {
   border-radius: 24px;
   position: relative;
-  width: 1550px;
-  padding: 0;
   overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: transparent;
-  /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); */
-}
-
-.container-slider > button {
-  position: relative;
-  overflow: visible;
-  background-color: var(--color-text);
-  border-radius: 100%;
-  width: 25px;
-  outline: none;
-  border: 0;
-  color: whitesmoke;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.container-slider > button:active {
-  color: black;
-}
-
-.slider-btn-next {
-  position: absolute;
-  right: 0;
-}
-
-.slider-btn-prev {
-  position: absolute;
-  left: 0;
-}
-
-.container-slider-links {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-
-.container-slider-links-small {
-  position: relative;
-  width: 8px;
-  height: 8px;
+  width: 1550px;
+  max-width: 650px;
   padding: 0;
-  border-radius: 50%;
-  outline: none;
-  border: 1px solid grey;
-  background-color: white;
-  transition: background-color 0.3s ease;
-  margin: 0 4px;
-  cursor: pointer;
+  background-color: transparent;
+  overflow: visible;
 }
 
-.container-slider-links-small-active {
-  background-color: var(--color-accent);
-  border-color: transparent;
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
   border-radius: 24px;
-  min-width: 100%;
-  height: auto;
   overflow: hidden;
-  object-fit: cover;
-  transition: transform 1s ease;
   background-color: transparent;
-}
-
-.slider-item-active-1 {
-  transform: translateX(0);
-}
-
-.slider-item-active-2 {
-  transform: translateX(-100%);
-}
-
-.slider-item-active-3 {
-  transform: translateX(-200%);
-}
-
-.slider-item-active-4 {
-  transform: translateX(-300%);
-}
-
-.slider-item-active-5 {
-  transform: translateX(-400%);
-}
-
-.slider-item-active-6 {
-  transform: translateX(-500%);
-}
-
-.slider-item-active-7 {
-  transform: translateX(-600%);
 }
 
 .slider-item img {
   width: 100%;
   height: auto;
-  border-radius: 24px;
-  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); */
-  transition: transform 0.3s ease;
+  border-radius: 0;
+  display: block;
 }
-
-/* .slider-item img:hover {
-  transform: scale(1.03);
-} */
 
 .slider-btn-prev,
 .slider-btn-next {
@@ -532,18 +458,52 @@ nav ul li a:active::after {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   font-size: 20px;
-  color: #333;
+  font-weight: 700;
+  color: var(--color-accent);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+.container-slider:hover .slider-btn-prev,
+.container-slider:hover .slider-btn-next {
+  opacity: 1;
 }
 
 .slider-btn-prev {
-  left: -20px; /* this overflows left */
+  left: -18px;
 }
 
 .slider-btn-next {
-  right: -20px; /* this overflows right */
+  right: -16px;
+}
+
+.container-slider-links {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.container-slider-links-small {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid grey;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-slider-links-small-active {
+  background-color: var(--color-accent);
+  border-color: transparent;
 }

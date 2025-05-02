@@ -5,17 +5,17 @@ function CarouselSlider({ children }) {
   const [slideDone, setSlideDone] = useState(true);
   const [timeID, setTimeID] = useState(null);
 
-  // useEffect(() => {
-  //   if (slideDone) {
-  //     setSlideDone(false);
-  //     setTimeID(
-  //       setTimeout(() => {
-  //         slideNext();
-  //         setSlideDone(true);
-  //       }, 5000)
-  //     );
-  //   }
-  // }, [slideDone]);
+  useEffect(() => {
+    if (slideDone) {
+      setSlideDone(false);
+      setTimeID(
+        setTimeout(() => {
+          slideNext();
+          setSlideDone(true);
+        }, 5000)
+      );
+    }
+  }, [slideDone]);
 
   const slideNext = () => {
     setActiveIndex((val) => (val >= children.length - 1 ? 0 : val + 1));
@@ -43,13 +43,17 @@ function CarouselSlider({ children }) {
       className="container-slider"
       onMouseEnter={AutoPlayStop}
       onMouseLeave={AutoPlayStart}>
-      {children.map((item, index) => (
+      <div className="slider-viewport">
         <div
-          className={`slider-item slider-item-active-${activeIndex + 1}`}
-          key={index}>
-          {item}
+          className="slider-track"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+          {children.map((item, index) => (
+            <div className="slider-item" key={index}>
+              {item}
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
       <div className="container-slider-links">
         {children.map((_, index) => (
@@ -68,21 +72,20 @@ function CarouselSlider({ children }) {
       </div>
 
       <button
-        className="slider-btn-next"
-        onClick={(e) => {
-          e.preventDefault();
-          slideNext();
-        }}>
-        {">"}
-      </button>
-
-      <button
         className="slider-btn-prev"
         onClick={(e) => {
           e.preventDefault();
           slidePrev();
         }}>
-        {"<"}
+        {"❮"}
+      </button>
+      <button
+        className="slider-btn-next"
+        onClick={(e) => {
+          e.preventDefault();
+          slideNext();
+        }}>
+        {"❯"}
       </button>
     </div>
   );
