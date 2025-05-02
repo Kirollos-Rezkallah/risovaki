@@ -1,13 +1,23 @@
+import { useState } from "react";
 import Logo from "./Logo";
 
 export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+
   return (
     <>
       <nav aria-label="Primary navigation">
         <a href="/" aria-label="Go to homepage">
           <Logo />
         </a>
-        <ul>
+        <div className="hamburger" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul className={menuOpen ? "active" : ""}>
           <li>
             <a href="#risovaki">Рисоваки</a>
           </li>

@@ -5,7 +5,7 @@ function Downloads() {
         {/* Block 1  */}
         <div className="file-block">
           <h3>PDF-файлы с пошаговыми инструкциями и настройками</h3>
-          <a className="text-button" href="#">
+          <a className="text-button" download href="/инструкция.pdf">
             Скачать инструкции
           </a>
         </div>
