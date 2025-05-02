@@ -2,8 +2,7 @@ import Nav from "./Nav";
 import Header from "./Header";
 import HighlightSection from "./HighlightSection";
 import ProductCard from "./ProductCard";
-import { printers } from "../product-card-data.js";
-import { printers_highlight } from "../hightlight-data.js";
+import { printers_highlight, printers } from "../data.js";
 import Downloads from "./Downloads.jsx";
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
         </section>
 
         {printers_highlight.map((printer) => (
-          <div id={printer.id} className="padding-top">
+          <div id={printer.id} className="padding-top" key={printer.id}>
             <HighlightSection key={printer.title} {...printer} id="" />
           </div>
         ))}

@@ -1,3 +1,44 @@
+import r1 from "./assets/models/risovaki/img1.jpg";
+import r2 from "./assets/models/risovaki/img2.jpg";
+import r3 from "./assets/models/risovaki/img3.jpg";
+
+import rp1 from "./assets/models/risovaki-pro/img1.jpg";
+import rp2 from "./assets/models/risovaki-pro/img2.jpg";
+import rp3 from "./assets/models/risovaki-pro/img3.jpg";
+
+export const risovakiImages = [
+  { src: r1, alt: "Рисоваки — вид 1" },
+  { src: r2, alt: "Рисоваки — вид 2" },
+  { src: r3, alt: "Рисоваки — вид 3" },
+];
+
+export const risovakiProImages = [
+  { src: rp1, alt: "Рисоваки Pro — вид 1" },
+  { src: rp2, alt: "Рисоваки Pro — вид 2" },
+  { src: rp3, alt: "Рисоваки Pro — вид 3" },
+];
+
+export const printers = [
+  {
+    title: "Рисоваки", // K10
+    size: "155×200×175 мм",
+    weight: "0.9 кг",
+    plug: "TF карта",
+    power: "12В, ≥ 2А (без адаптера)",
+    slicer: "Easyware K9",
+    href: "risovaki",
+  },
+  {
+    title: "Рисоваки Pro", // K7
+    size: "175×235×270 мм",
+    weight: "1.0 кг",
+    plug: "TF карта + USB кабель",
+    power: "12В, 30Вт (адаптер в комплекте)",
+    slicer: "Easyware K7",
+    href: "risovaki-pro",
+  },
+];
+
 export const printers_highlight = [
   {
     id: "risovaki",
@@ -7,6 +48,7 @@ export const printers_highlight = [
     ozonHref: "https://ozon.ru/your-k10-link",
     wildberriesHref: "https://wildberries.ru/your-k10-link",
     yandexHref: "https://market.yandex.ru/your-k10-link",
+    images: risovakiImages,
   },
   {
     id: "risovaki-pro",
@@ -16,5 +58,6 @@ export const printers_highlight = [
     ozonHref: "https://ozon.ru/your-k7-link",
     wildberriesHref: "https://wildberries.ru/your-k7-link",
     yandexHref: "https://market.yandex.ru/your-k7-link",
+    images: risovakiProImages,
   },
 ];

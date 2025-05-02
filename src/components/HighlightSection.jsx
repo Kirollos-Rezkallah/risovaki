@@ -1,4 +1,4 @@
-import highlightImg1 from "../assets/highlight-img-1.jpg";
+import CarouselSlider from "./CarouselSlider";
 import MarketplaceButtons from "./MarketplaceButtons";
 
 export default function HighlightSection({
@@ -7,13 +7,19 @@ export default function HighlightSection({
   ozonHref,
   wildberriesHref,
   yandexHref,
+  images,
   id,
 }) {
   return (
     <section id={id} className="highlight">
       <h2>{title}</h2>
-      <div className="hightlight-container">
-        <img src={highlightImg1} alt="First highlight image" />
+      <div className="highlight-container">
+        <CarouselSlider>
+          {images.map((img, i) => (
+            <img key={i} src={img.src} alt={img.alt} />
+          ))}
+        </CarouselSlider>
+
         <div className="highlight-text">
           <p>{description}</p>
           <MarketplaceButtons
