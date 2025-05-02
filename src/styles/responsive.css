@@ -12,6 +12,7 @@
     height: auto;
     max-width: 320px;
     object-fit: contain;
+    margin-top: 32px;
   }
 
   .highlight {
@@ -72,6 +73,7 @@
     height: 3px;
     background-color: var(--color-text);
     margin: 5px 0;
+    border-radius: 50px;
     transition: all 0.3s ease;
   }
   .files-row {
