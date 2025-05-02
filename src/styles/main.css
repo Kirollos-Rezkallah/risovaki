@@ -167,6 +167,7 @@ li:last-child {
 }
 
 nav ul li a {
+  position: relative;
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s ease;
   font-weight: 600;
@@ -197,6 +198,11 @@ nav ul li a::after {
   transform: scaleX(0);
   transform-origin: left;
   will-change: transform;
+}
+
+nav ul li a:hover::after,
+nav ul li a:active::after {
+  transform: scaleX(1);
 }
 
 /* HIGHLIGHT SECTION */
