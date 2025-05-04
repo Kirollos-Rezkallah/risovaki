@@ -5,17 +5,19 @@ export default function Header() {
   return (
     <header>
       <div className="header-text-box">
-        <h1>Печатай точно Работай стабильно</h1>
-        <p className="header-text">
+        <h1 className="fade-in-up delay-1">Печатай точно Работай стабильно</h1>
+        <p className="header-text fade-in-right delay-3">
           Выберите идеальный <strong>3D-принтер</strong> для своих задач:{" "}
           <strong>Рисоваки</strong> или <strong>Рисоваки Pro</strong>
           <br /> Обе модели созданы для лёгкого старта, стабильной работы и
           высокой точности. Начните печатать с уверенностью и откройте новые
           возможности творчества.
         </p>
-        <Button href={"#product-cards"}>Выбрать модель</Button>
+        <Button className="btn" href={"#product-cards"}>
+          Выбрать модель
+        </Button>
       </div>
-      <img src={heroImg} alt="hero image" />
+      <img className="fade-in-left delay-2" src={heroImg} alt="hero image" />
     </header>
   );
 }
