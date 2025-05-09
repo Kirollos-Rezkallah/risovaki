@@ -31,7 +31,7 @@ export default function Nav() {
             <a href="#downloads">Загрузки</a>
           </li>
           <li className="fade-in-up delay-4">
-            <a href="#">Контакты</a>
+            <a href="#footer">Контакты</a>
           </li>
         </ul>
       </nav>

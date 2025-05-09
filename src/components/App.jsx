@@ -4,6 +4,7 @@ import HighlightSection from "./HighlightSection";
 import ProductCard from "./ProductCard";
 import { printers_highlight, printers } from "../data.js";
 import Downloads from "./Downloads.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
         ))}
         <Downloads />
       </main>
+
+      <Footer />
     </div>
   );
 }
