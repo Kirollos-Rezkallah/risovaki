@@ -2,11 +2,12 @@ function Footer() {
   return (
     <footer className="footer" id="footer">
       <p className="footer-text">
-        © {new Date().getFullYear()} Рисоваки. Все права защищены.
+        © {new Date().getFullYear()} Рисоваки — ИП Сидоркина Ульяна Анатольевна
       </p>
+      <p>ИНН 246106037933</p>
       <div className="footer-socials">
         <a
-          href="https://vk.com"
+          href="https://vk.com/risowaki"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="VK">
@@ -21,7 +22,7 @@ function Footer() {
           </svg>
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/risowaki?igsh=dHowYXd1NnhzejFr&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram">

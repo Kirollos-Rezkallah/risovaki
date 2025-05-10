@@ -533,6 +533,12 @@ nav ul li a:active::after {
   text-align: center;
 }
 
+.footer p {
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
+}
+
 .footer-text {
   font-size: 14px;
   color: var(--color-text);
