@@ -24,7 +24,7 @@ export const printers = [
     size: "155×200×175 мм",
     weight: "0.9 кг",
     plug: "TF карта",
-    power: "12В, ≥ 2А (без адаптера)",
+    power: "12В, ≥ 2А (адаптер в комплекте)",
     slicer: "Easyware K9",
     href: "risovaki",
     img: r1,

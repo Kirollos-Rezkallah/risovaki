@@ -93,7 +93,7 @@ header a:last-child {
 
 .btn {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
   padding: 0.625rem 1.25rem;
@@ -106,7 +106,6 @@ header a:last-child {
 
 .btn:link,
 .btn:visited {
-  font-size: 1.5rem;
   text-decoration: none;
   color: var(--color-text-light);
 }
@@ -169,7 +168,7 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:active {
-  color: var(--color-accent);
+  color: var(--color-primary);
   transform: scale(1);
 }
 
@@ -405,6 +404,7 @@ nav ul li a:active::after {
 
 .downloads .text-button {
   margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .upload-callout {
