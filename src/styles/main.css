@@ -56,7 +56,6 @@ header {
 
 header img {
   width: 25rem;
-  margin-right: 3rem;
 }
 
 h1 {
@@ -168,7 +167,7 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:active {
-  color: var(--color-primary);
+  color: var(--color-accent);
   transform: scale(1);
 }
 
