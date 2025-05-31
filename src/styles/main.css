@@ -186,7 +186,7 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:active {
-  color: var(--color-accent);
+  color: var(--color-primary);
   transform: scale(1);
 }
 
@@ -300,7 +300,6 @@ nav ul li a:active::after {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 8rem;
-  background-color: var(--color-background-dark);
   border-radius: 0.3125rem;
   animation: fadeInUp 0.7s ease-out both;
 }
