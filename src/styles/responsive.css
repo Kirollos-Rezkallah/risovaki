@@ -38,32 +38,36 @@
   }
 
   nav ul {
-    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 5.75rem;
-    right: 1rem;
+    position: fixed;
+    top: 092px;
+    right: 0;
+    height: 100vh;
+    width: 16rem;
     background-color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    border-left: 1px solid #ddd;
     z-index: 999;
+    transform: translateX(100%);
     opacity: 0;
-    transform: translateY(-10px);
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
   }
 
   nav ul.active {
+    transform: translateX(0);
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
   }
 
   .hamburger {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
     display: block;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .hamburger div {
@@ -168,12 +172,13 @@
   }
 
   .product-cards-section {
-    padding-top: 1.5rem;
+    padding-top: 7rem;
   }
 
   nav {
-    position: relative;
+    position: fixed;
     z-index: 999;
+    padding: 1rem 1.5rem 0.5rem;
   }
 
   nav ul {
@@ -189,7 +194,7 @@
   }
 
   .padding-top {
-    padding-top: 2rem;
+    padding-top: 7rem;
   }
 
   /* Highlight section */
@@ -392,6 +397,10 @@
 
   .header-text-box {
     margin-top: 0;
+  }
+
+  .hamburger {
+    right: 2rem;
   }
 
   .highlight-container {

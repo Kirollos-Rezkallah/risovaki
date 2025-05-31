@@ -22,16 +22,24 @@ export default function Nav() {
 
         <ul className={menuOpen ? "active" : ""}>
           <li className="fade-in-up delay-1">
-            <a href="#risovaki">Рисоваки</a>
+            <a href="#risovaki" onClick={() => setMenuOpen(false)}>
+              Рисоваки
+            </a>
           </li>
           <li className="fade-in-up delay-2">
-            <a href="#risovaki-pro">Рисоваки Pro</a>
+            <a href="#risovaki-pro" onClick={() => setMenuOpen(false)}>
+              Рисоваки Pro
+            </a>
           </li>
           <li className="fade-in-up delay-3">
-            <a href="#downloads">Загрузки</a>
+            <a href="#downloads" onClick={() => setMenuOpen(false)}>
+              Загрузки
+            </a>
           </li>
           <li className="fade-in-up delay-4">
-            <a href="#footer">Контакты</a>
+            <a href="#footer" onClick={() => setMenuOpen(false)}>
+              Контакты
+            </a>
           </li>
         </ul>
       </nav>
