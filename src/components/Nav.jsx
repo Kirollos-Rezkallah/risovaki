@@ -1,48 +1,66 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const [shouldRenderMenu, setShouldRenderMenu] = useState(false);
+
+  // When menuOpen changes, control visibility
+  useEffect(() => {
+    if (menuOpen) {
+      setShouldRenderMenu(true);
+    } else {
+      // Delay removal after animation
+      const timeout = setTimeout(() => setShouldRenderMenu(false), 400);
+      return () => clearTimeout(timeout);
+    }
+  }, [menuOpen]);
 
   return (
     <>
-      <nav className="fade-in-down delay-1" aria-label="Primary navigation">
-        <a
-          className="fade-in-left delay-1"
-          href="/"
-          aria-label="Go to homepage">
+      <nav aria-label="Primary navigation">
+        <a href="/" aria-label="Go to homepage">
           <Logo />
         </a>
-        <div className="hamburger" onClick={toggleMenu}>
+        <div className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-
-        <ul className={menuOpen ? "active" : ""}>
-          <li className="fade-in-up delay-1">
-            <a href="#risovaki" onClick={() => setMenuOpen(false)}>
-              Рисоваки
-            </a>
-          </li>
-          <li className="fade-in-up delay-2">
-            <a href="#risovaki-pro" onClick={() => setMenuOpen(false)}>
-              Рисоваки Pro
-            </a>
-          </li>
-          <li className="fade-in-up delay-3">
-            <a href="#downloads" onClick={() => setMenuOpen(false)}>
-              Загрузки
-            </a>
-          </li>
-          <li className="fade-in-up delay-4">
-            <a href="#footer" onClick={() => setMenuOpen(false)}>
-              Контакты
-            </a>
-          </li>
-        </ul>
       </nav>
+
+      {shouldRenderMenu && (
+        <div
+          className={`mobile-nav ${
+            menuOpen ? "active fade-in-right" : "slide-out-right"
+          }`}>
+          <ul>
+            <li>
+              <a href="#risovaki" onClick={() => setMenuOpen(false)}>
+                Рисоваки
+              </a>
+            </li>
+            <li>
+              <a href="#risovaki-pro" onClick={() => setMenuOpen(false)}>
+                Рисоваки Pro
+              </a>
+            </li>
+            <li>
+              <a href="#downloads" onClick={() => setMenuOpen(false)}>
+                Загрузки
+              </a>
+            </li>
+            <li>
+              <a href="#footer" onClick={() => setMenuOpen(false)}>
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <div className="mobile-logo mobile-only">
+            <Logo />
+          </div>
+        </div>
+      )}
     </>
   );
 }

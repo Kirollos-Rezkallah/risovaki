@@ -57,9 +57,11 @@ export const printers_highlight = [
     title: "Рисоваки Pro — больше возможностей, такая же простота",
     description:
       "Рисоваки Pro — это мини-принтер с расширенным функционалом: быстрая печать, поддержка USB и TF карты, продвинутая версия софта и улучшенные размеры корпуса. Подходит не только для начинающих, но и для студентов и DIY-энтузиастов. В комплекте — адаптер, видеоуроки и всё, чтобы начать без лишних настроек.",
-    ozonHref: "https://ozon.ru/your-k7-link",
-    wildberriesHref: "https://wildberries.ru/your-k7-link",
-    yandexHref: "https://market.yandex.ru/your-k7-link",
+    ozonHref:
+      "https://www.ozon.ru/product/3d-printer-risovaki-pro-2190208551/?oos_search=false",
+    wildberriesHref: "https://www.wildberries.ru/catalog/49212743/detail.aspx",
+    yandexHref:
+      "https://market.yandex.ru/pr/4130381346?showOriginalKmEmptyOffer=1",
     images: risovakiProImages,
   },
 ];

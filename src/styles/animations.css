@@ -42,6 +42,17 @@
   }
 }
 
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -69,6 +80,10 @@
 
 .fade-in-right {
   animation: fadeInRight 0.7s ease-out both;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.4s ease-out both;
 }
 
 /* STAGGERED DELAYS*/

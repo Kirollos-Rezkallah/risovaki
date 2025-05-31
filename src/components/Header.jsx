@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-text-box">
-        <h1 className="fade-in-up delay-1">Печатай точно Работай стабильно</h1>
+        <h1 className="fade-in-up delay-1">Твой легкий старт в ЗD печати</h1>
         <p className="header-text fade-in-right delay-3">
           Выберите идеальный <strong>3D-принтер</strong> для своих задач:{" "}
           <strong>Рисоваки</strong> или <strong>Рисоваки Pro</strong>
