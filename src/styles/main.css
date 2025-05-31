@@ -132,10 +132,9 @@ header a:last-child {
 nav {
   padding: 1rem 7rem 0.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   margin-bottom: 1rem;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -143,6 +142,10 @@ nav {
   z-index: 1000;
   background-color: var(--color-background);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+nav > a {
+  margin-right: auto; /* pushes the rest of the content to the right */
 }
 
 .logo {

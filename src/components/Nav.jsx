@@ -22,6 +22,24 @@ export default function Nav() {
         <a href="/" aria-label="Go to homepage">
           <Logo />
         </a>
+
+        {/* DESKTOP LINKS */}
+        <ul className="desktop-nav">
+          <li>
+            <a href="#risovaki">Рисоваки</a>
+          </li>
+          <li>
+            <a href="#risovaki-pro">Рисоваки Pro</a>
+          </li>
+          <li>
+            <a href="#downloads">Загрузки</a>
+          </li>
+          <li>
+            <a href="#footer">Контакты</a>
+          </li>
+        </ul>
+
+        {/* HAMBURGER ICON */}
         <div className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
           <div></div>
           <div></div>

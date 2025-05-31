@@ -114,6 +114,10 @@
     display: block;
   }
 
+  .desktop-nav {
+    display: none;
+  }
+
   .files-row {
     display: flex;
     flex-direction: row;
