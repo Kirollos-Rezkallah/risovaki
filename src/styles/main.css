@@ -584,6 +584,10 @@ nav ul li a:active::after {
 }
 
 .vk path {
-  stroke-width: 2;
+  stroke-width: 1.5;
   fill: none;
+}
+
+.telegram path {
+  stroke-width: 1.5;
 }

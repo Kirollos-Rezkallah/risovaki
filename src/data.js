@@ -47,9 +47,10 @@ export const printers_highlight = [
     title: "Рисоваки — твой первый шаг в мир 3D-печати",
     description:
       "Лёгкий, тихий и простой в использовании 3D-принтер начального уровня. Рисоваки работает с PLA и TPU, имеет автоматическую нарезку моделей и управление одной кнопкой. Идеально подходит для домашних занятий, творчества и первых проектов с детьми. Компактный размер, понятный софт и бесплатная библиотека моделей — начни печатать сразу.",
-    ozonHref: "https://ozon.ru/your-k10-link",
-    wildberriesHref: "https://wildberries.ru/your-k10-link",
-    yandexHref: "https://market.yandex.ru/your-k10-link",
+    ozonHref: "https://ozon.ru/t/wiBTaTN",
+    wildberriesHref:
+      "https://www.wildberries.ru/catalog/313703907/detail.aspx?targetUrl=GP",
+    yandexHref: "https://market.yandex.ru/cc/6vpzEK",
     images: risovakiImages,
   },
   {
