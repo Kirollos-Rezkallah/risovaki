@@ -62,7 +62,7 @@ export default function Nav() {
           className={`mobile-nav ${
             menuOpen ? "active fade-in-right" : "slide-out-right"
           }`}>
-          <ul>
+          <ul className="desktop-nav">
             <li>
               <a href="#risovaki" onClick={() => setMenuOpen(false)}>
                 Рисоваки
@@ -75,7 +75,23 @@ export default function Nav() {
             </li>
             <li>
               <a href="#downloads" onClick={() => setMenuOpen(false)}>
-                Загрузки
+                Инструкции
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA"
+                target="_blank"
+                onClick={() => setMenuOpen(false)}>
+                3D модели
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA"
+                target="_blank"
+                onClick={() => setMenuOpen(false)}>
+                Видео
               </a>
             </li>
             <li>
