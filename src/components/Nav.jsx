@@ -19,7 +19,7 @@ export default function Nav() {
   return (
     <>
       <nav aria-label="Primary navigation">
-        <a href="/" aria-label="Go to homepage">
+        <a href="#" aria-label="Go to homepage">
           <Logo />
         </a>
 
@@ -32,7 +32,17 @@ export default function Nav() {
             <a href="#risovaki-pro">Рисоваки Pro</a>
           </li>
           <li>
-            <a href="#downloads">Загрузки</a>
+            <a href="#downloads">Инструкции</a>
+          </li>
+          <li>
+            <a href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA" target="_blank">
+              3D модели
+            </a>
+          </li>
+          <li>
+            <a href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA" target="_blank">
+              Видео
+            </a>
           </li>
           <li>
             <a href="#footer">Контакты</a>
