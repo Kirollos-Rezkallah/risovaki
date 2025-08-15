@@ -1,15 +1,7 @@
 import CarouselSlider from "./CarouselSlider";
-import MarketplaceButtons from "./MarketplaceButtons";
+import Button from "./Button";
 
-export default function HighlightSection({
-  title,
-  description,
-  ozonHref,
-  wildberriesHref,
-  yandexHref,
-  images,
-  id,
-}) {
+export default function HighlightSection({ title, description, images, id }) {
   return (
     <section id={id} className="highlight">
       <h2>{title}</h2>
@@ -22,11 +14,11 @@ export default function HighlightSection({
 
         <div className="highlight-text">
           <p>{description}</p>
-          <MarketplaceButtons
-            ozonHref={ozonHref}
-            wildberriesHref={wildberriesHref}
-            yandexHref={yandexHref}
-          />
+          <Button
+            href={"https://t.me/myidea24"}
+            bgColor={"var(--color-primary)"}>
+            Оформить заказ
+          </Button>
         </div>
       </div>
     </section>

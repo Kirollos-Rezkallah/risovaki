@@ -252,6 +252,7 @@ nav ul li a:active::after {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .highlight h2 {
@@ -484,6 +485,12 @@ nav ul li a:active::after {
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+.slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-btn-prev,

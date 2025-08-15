@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Arrows from "./Arrows";
 
 function CarouselSlider({ children }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -72,20 +73,20 @@ function CarouselSlider({ children }) {
       </div>
 
       <button
-        className="slider-btn-prev"
+        className="slider-btn slider-btn-prev"
         onClick={(e) => {
           e.preventDefault();
           slidePrev();
         }}>
-        {"❮"}
+        <Arrows direction="right" />
       </button>
       <button
-        className="slider-btn-next"
+        className="slider-btn slider-btn-next"
         onClick={(e) => {
           e.preventDefault();
           slideNext();
         }}>
-        {"❯"}
+        <Arrows direction="left" />
       </button>
     </div>
   );
