@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Arrows from "./Arrows";
+
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 function CarouselSlider({ children }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -78,7 +79,7 @@ function CarouselSlider({ children }) {
           e.preventDefault();
           slidePrev();
         }}>
-        <Arrows direction="right" />
+        <ChevronLeft color={"var(--color-accent)"} strokeWidth={3.5} />
       </button>
       <button
         className="slider-btn slider-btn-next"
@@ -86,7 +87,7 @@ function CarouselSlider({ children }) {
           e.preventDefault();
           slideNext();
         }}>
-        <Arrows direction="left" />
+        <ChevronRight color={"var(--color-accent)"} strokeWidth={3.5} />
       </button>
     </div>
   );
