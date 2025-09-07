@@ -585,16 +585,6 @@ nav ul li a:active::after {
 
 .footer-socials svg {
   stroke: var(--color-accent);
-  fill: none;
-  width: 28px;
-  height: 24px;
-}
-
-.vk path {
-  stroke-width: 1.5;
-  fill: none;
-}
-
-.telegram path {
-  stroke-width: 1.5;
+  width: 32px;
+  height: 32px;
 }
