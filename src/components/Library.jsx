@@ -1,7 +1,8 @@
+import { useState } from "react";
+import { data } from "../models-data";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { Download } from "lucide-react";
-import { useState } from "react";
 
 const onHoverStyles = { filter: "blur(2px)", cursor: "pointer" };
 
@@ -17,10 +18,10 @@ export default function Library() {
         borderRadius: "1.5rem",
         padding: "2rem",
       }}>
-      <ImageList sx={{ width: 1400, height: 400 }} cols={6} rowHeight={50}>
-        {itemData.map((item, index) => (
+      <ImageList sx={{ width: 1250, height: 300 }} cols={6} rowHeight={50}>
+        {data.map((item, index) => (
           <ImageListItem
-            key={item.img}
+            key={item.id}
             style={{
               display: index === itemData.length - 1 ? "none" : "block",
               position: "relative",
@@ -28,36 +29,35 @@ export default function Library() {
             }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}>
-            <img
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-              style={{
-                borderRadius: "12px",
-                transition: "all 0.3s ease",
-                ...(hoveredIndex === index ? onHoverStyles : {}),
-              }}
-            />
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Link">
+              <img
+                srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item.image}?w=164&h=164&fit=crop&auto=format`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  borderRadius: "12px",
+                  transition: "all 0.3s ease",
+                  ...(hoveredIndex === index ? onHoverStyles : {}),
+                }}
+              />
+            </a>
 
             {hoveredIndex === index && (
               <Download
-                size={100}
-                color="white"
+                size={50}
+                color="var(--color-accent)"
                 style={{
                   position: "absolute",
-                  top: "150%",
-                  left: "50%",
-                  transform:
-                    hoveredIndex === index
-                      ? "translate(-50%, -50%) scale(1)"
-                      : "translate(-50%, -50%) scale(0.8)",
+                  top: "70%",
+                  left: "35%",
                   opacity: hoveredIndex === index ? 1 : 0,
-                  backgroundColor: "rgba(255, 102, 0, 0.6)",
-                  borderRadius: "50%",
-                  padding: "8px",
                   cursor: "pointer",
-                  transition: "all 1s ease 1s", // <-- fade/scale with delay
+                  transition: "all 1s ease 1s",
                 }}
               />
             )}
