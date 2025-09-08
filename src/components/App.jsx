@@ -4,6 +4,7 @@ import HighlightSection from "./HighlightSection";
 import ProductCard from "./ProductCard";
 import { printers_highlight, printers } from "../data.js";
 import Downloads from "./Downloads.jsx";
+import Library from "./Library.jsx";
 import Footer from "./Footer.jsx";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <HighlightSection key={printer.title} {...printer} id="" />
           </div>
         ))}
+        <Library />
         <Downloads />
       </main>
 
