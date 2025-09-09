@@ -10,6 +10,7 @@ FONT SIZE SYSTEM (px)
 
 :root {
   --color-primary: var(--oc-cyan-7);
+  --color-primary-light: var(--oc-blue-1);
   --color-accent: var(--oc-orange-8);
   --color-accent-light: var(--oc-orange-1);
   --color-text: var(--oc-gray-9);
