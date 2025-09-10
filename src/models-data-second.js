@@ -1,5 +1,5 @@
 // Auto-generated from https://www.toy123d.com/col.jsp?id=1510
-export const data = [
+export const dataSecond = [
   {
     id: 1,
     image:

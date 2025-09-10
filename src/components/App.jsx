@@ -3,6 +3,8 @@ import Header from "./Header";
 import HighlightSection from "./HighlightSection";
 import ProductCard from "./ProductCard";
 import { printers_highlight, printers } from "../data.js";
+import { dataFirst } from "../models-data.js";
+import { dataSecond } from "../models-data-second.js";
 import Downloads from "./Downloads.jsx";
 import Library from "./Library.jsx";
 import Footer from "./Footer.jsx";
@@ -27,7 +29,14 @@ function App() {
             <HighlightSection key={printer.title} {...printer} id="" />
           </div>
         ))}
-        <Library />
+        <Library
+          data={dataFirst}
+          heading={"Профессиональные 3D-файлы для Рисоваки"}
+        />
+        <Library
+          data={dataSecond}
+          heading={"Профессиональные 3D-файлы для Рисоваки Pro"}
+        />
         <Downloads />
       </main>
 

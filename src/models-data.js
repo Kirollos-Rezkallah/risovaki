@@ -1,4 +1,4 @@
-export const data = [
+export const dataFirst = [
   {
     id: 1,
     image:

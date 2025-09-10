@@ -56,7 +56,7 @@ html {
 
 header {
   display: flex;
-  margin-bottom: 8rem;
+  /* margin-bottom: 8rem; */
 }
 
 .header-text-box {
@@ -220,7 +220,7 @@ nav ul li a:active::after {
   height: 34.375rem;
   background-color: rgba(176, 151, 252, 0.2);
   border-radius: 1.5rem;
-  margin-bottom: 8rem;
+  /* margin-bottom: 8rem; */
   overflow: visible;
 }
 
@@ -301,7 +301,7 @@ nav ul li a:active::after {
 .product-cards {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 8rem;
+  /* margin-bottom: 8rem; */
   border-radius: 0.3125rem;
   animation: fadeInUp 0.7s ease-out both;
 }
@@ -405,7 +405,8 @@ nav ul li a:active::after {
 /* DOWNLOADS */
 
 .downloads {
-  margin-bottom: 8rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
 }
 
 .files-row {
@@ -592,9 +593,19 @@ nav ul li a:active::after {
 
 /* IMAGE LIBRARY */
 
+.lib-section {
+  margin-top: 2rem;
+  padding-top: 8rem;
+}
+
+.lib-section h3 {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
 .lib-wrap {
-  margin-bottom: 3rem;
-  margin-top: 15rem;
   display: flex;
   justify-content: center;
   background-color: var(--color-primary-light);

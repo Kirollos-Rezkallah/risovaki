@@ -38,11 +38,7 @@ export default function Nav() {
             <a href="#">Видео</a>
           </li>
           <li>
-            <a href="#downloads">Инструкции</a>
-          </li>
-
-          <li>
-            <a href="#footer">Контакты</a>
+            <a href="#downloads">Инструкции & Контакты</a>
           </li>
         </ul>
 
@@ -82,13 +78,7 @@ export default function Nav() {
             </li>
             <li>
               <a href="#downloads" onClick={() => setMenuOpen(false)}>
-                Инструкции
-              </a>
-            </li>
-
-            <li>
-              <a href="#footer" onClick={() => setMenuOpen(false)}>
-                Контакты
+                Инструкции & Контакты
               </a>
             </li>
           </ul>

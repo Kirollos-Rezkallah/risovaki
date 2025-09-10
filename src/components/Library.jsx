@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { data } from "../models-data";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Download } from "lucide-react";
 
-export default function Library() {
+export default function Library({ data, heading }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Responsive cols using MUI breakpoints
@@ -21,42 +20,45 @@ export default function Library() {
   const rowHeight = isXs ? 110 : isSm ? 120 : 130;
 
   return (
-    <section className="lib-wrap" id="3d-models">
-      <ImageList className="lib-list" cols={cols} rowHeight={rowHeight}>
-        {data.map((item, index) => (
-          <ImageListItem
-            key={item.id}
-            className={`lib-item ${
-              index === data.length - 1 ? "lib-item--hide" : ""
-            }`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}>
-            <a
-              className="lib-link"
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download Link">
-              <img
-                className={`lib-img ${
-                  hoveredIndex === index ? "is-hovered" : ""
-                }`}
-                srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.image}?w=164&h=164&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-                draggable={false}
-              />
-              <Download
-                aria-hidden
-                className={`lib-download-icon ${
-                  hoveredIndex === index ? "is-visible" : ""
-                }`}
-              />
-            </a>
-          </ImageListItem>
-        ))}
-      </ImageList>
+    <section className="lib-section" id="3d-models">
+      <h3>{heading}</h3>
+      <div className="lib-wrap">
+        <ImageList className="lib-list" cols={cols} rowHeight={rowHeight}>
+          {data.map((item, index) => (
+            <ImageListItem
+              key={item.id}
+              className={`lib-item ${
+                index === data.length - 1 ? "lib-item--hide" : ""
+              }`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}>
+              <a
+                className="lib-link"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Link">
+                <img
+                  className={`lib-img ${
+                    hoveredIndex === index ? "is-hovered" : ""
+                  }`}
+                  srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.image}?w=164&h=164&fit=crop&auto=format`}
+                  alt={item.title}
+                  loading="lazy"
+                  draggable={false}
+                />
+                <Download
+                  aria-hidden
+                  className={`lib-download-icon ${
+                    hoveredIndex === index ? "is-visible" : ""
+                  }`}
+                />
+              </a>
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </div>
     </section>
   );
 }
