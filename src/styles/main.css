@@ -589,3 +589,70 @@ nav ul li a:active::after {
   width: 32px;
   height: 32px;
 }
+
+/* IMAGE LIBRARY */
+
+.lib-wrap {
+  margin-bottom: 3rem;
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary-light);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  height: 570px;
+  overflow-y: auto;
+}
+
+.lib-list {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.lib-item {
+  position: relative;
+}
+
+.lib-item--hide {
+  display: none;
+}
+
+.lib-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.lib-img {
+  width: 150px;
+  height: 112.5px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(1);
+}
+
+.lib-img.is-hovered {
+  filter: brightness(0.5) blur(2px);
+  cursor: pointer;
+}
+
+.lib-download-icon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  transition: opacity 0.25s ease 0.12s, transform 0.25s ease 0.12s;
+  pointer-events: none;
+  color: var(--color-accent);
+  width: 50px;
+  height: 50px;
+}
+
+.lib-download-icon.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}

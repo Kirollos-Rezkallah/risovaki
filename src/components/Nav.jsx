@@ -32,18 +32,15 @@ export default function Nav() {
             <a href="#risovaki-pro">Рисоваки Pro</a>
           </li>
           <li>
+            <a href="#3d-models">3D модели</a>
+          </li>
+          <li>
+            <a href="#">Видео</a>
+          </li>
+          <li>
             <a href="#downloads">Инструкции</a>
           </li>
-          <li>
-            <a href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA" target="_blank">
-              3D модели
-            </a>
-          </li>
-          <li>
-            <a href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA" target="_blank">
-              Видео
-            </a>
-          </li>
+
           <li>
             <a href="#footer">Контакты</a>
           </li>
@@ -74,26 +71,21 @@ export default function Nav() {
               </a>
             </li>
             <li>
-              <a href="#downloads" onClick={() => setMenuOpen(false)}>
-                Инструкции
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA"
-                target="_blank"
-                onClick={() => setMenuOpen(false)}>
+              <a href="#3d-models" onClick={() => setMenuOpen(false)}>
                 3D модели
               </a>
             </li>
             <li>
-              <a
-                href="https://disk.yandex.ru/d/CAPL_f-ObKlTYA"
-                target="_blank"
-                onClick={() => setMenuOpen(false)}>
+              <a href="#" onClick={() => setMenuOpen(false)}>
                 Видео
               </a>
             </li>
+            <li>
+              <a href="#downloads" onClick={() => setMenuOpen(false)}>
+                Инструкции
+              </a>
+            </li>
+
             <li>
               <a href="#footer" onClick={() => setMenuOpen(false)}>
                 Контакты
