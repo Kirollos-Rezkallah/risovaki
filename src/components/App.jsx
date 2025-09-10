@@ -35,7 +35,8 @@ function App() {
         />
         <Library
           data={dataSecond}
-          heading={"Профессиональные 3D-файлы для Рисоваки Pro"}
+          heading={"Профессиональные 3D-файлы для Рисоваки “Pro„"}
+          bgColor="var(--color-data-second)"
         />
         <Downloads />
       </main>

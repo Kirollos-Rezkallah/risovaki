@@ -5,7 +5,11 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Download } from "lucide-react";
 
-export default function Library({ data, heading }) {
+export default function Library({
+  data,
+  heading,
+  bgColor = "var(--color-data-first)",
+}) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Responsive cols using MUI breakpoints
@@ -22,7 +26,7 @@ export default function Library({ data, heading }) {
   return (
     <section className="lib-section" id="3d-models">
       <h3>{heading}</h3>
-      <div className="lib-wrap">
+      <div className="lib-wrap" style={{ backgroundColor: bgColor }}>
         <ImageList className="lib-list" cols={cols} rowHeight={rowHeight}>
           {data.map((item, index) => (
             <ImageListItem

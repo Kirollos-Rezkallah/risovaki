@@ -453,9 +453,15 @@
     text-align: left;
   }
 
-  .highlight h2 {
+  .highlight h2,
+  .lib-section h3 {
     font-size: 1.5rem;
     padding: 0 0.5rem;
+  }
+
+  .lib-section h3 {
+    text-align: center;
+    margin-right: 0;
   }
 
   .highlight p {

@@ -10,13 +10,15 @@ FONT SIZE SYSTEM (px)
 
 :root {
   --color-primary: var(--oc-cyan-7);
-  --color-primary-light: var(--oc-blue-1);
   --color-accent: var(--oc-orange-8);
-  --color-accent-light: var(--oc-orange-1);
   --color-text: var(--oc-gray-9);
+  --color-accent-light: var(--oc-orange-1);
   --color-text-light: var(--oc-gray-0);
   --color-background: var(--oc-gray-2);
   --color-background-dark: var(--oc-gray-1);
+
+  --color-data-first: var(--oc-blue-1);
+  --color-data-second: var(--oc-pink-1);
 
   --color-ozon: var(--oc-indigo-9);
   --color-yandex: var(--oc-yellow-9);
@@ -608,7 +610,7 @@ nav ul li a:active::after {
 .lib-wrap {
   display: flex;
   justify-content: center;
-  background-color: var(--color-primary-light);
+  /* background-color: var(--color-primary-light); */
   border-radius: 1.5rem;
   padding: 1.5rem;
   height: 570px;
