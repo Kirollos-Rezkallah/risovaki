@@ -596,15 +596,44 @@ nav ul li a:active::after {
 /* IMAGE LIBRARY */
 
 .lib-section {
-  margin-top: 2rem;
   padding-top: 8rem;
 }
 
 .lib-section h3 {
-  margin-left: 2rem;
   font-size: 2rem;
   color: var(--color-accent);
-  margin-bottom: 1.5rem;
+}
+
+.gallery {
+  --surface: color-mix(in oklab, var(--color-background) 94%, white 6%);
+
+  background: var(--surface);
+  border-radius: 24px;
+  outline: 1px solid color-mix(in oklab, var(--surface) 85%, black 15%);
+  position: relative;
+  overflow: clip; /* keeps pattern inside rounded corners */
+  padding: clamp(16px, 2vw, 28px);
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.gallery--diagonal-mist {
+  background: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--color-primary) 7%, transparent) 0%,
+      transparent 40%,
+      transparent 60%,
+      color-mix(in oklab, var(--color-accent) 7%, transparent) 100%
+    ),
+    var(--surface);
 }
 
 .lib-wrap {
@@ -621,6 +650,32 @@ nav ul li a:active::after {
   max-width: 100%;
   width: 100%;
   overflow-x: hidden;
+}
+
+.section-head {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.section-head h3 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.badge {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.75rem; /* ~12px */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em; /* extra space between letters */
+  color: color-mix(in oklab, var(--color-primary) 45%, var(--color-text) 55%);
+  margin-bottom: 0.4rem; /* gap before heading */
 }
 
 .lib-item {

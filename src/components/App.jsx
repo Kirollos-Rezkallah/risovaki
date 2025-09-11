@@ -31,11 +31,16 @@ function App() {
         ))}
         <Library
           data={dataFirst}
-          heading={"Профессиональные 3D-файлы для Рисоваки"}
+          heading={
+            <>
+              Профессиональные 3D-файлы для Рисоваки{" "}
+              <span className="badge">“Pro”</span>
+            </>
+          }
         />
         <Library
           data={dataSecond}
-          heading={"Профессиональные 3D-файлы для Рисоваки “Pro„"}
+          heading={"Профессиональные 3D-файлы для Рисоваки"}
           bgColor="var(--color-data-second)"
         />
         <Downloads />

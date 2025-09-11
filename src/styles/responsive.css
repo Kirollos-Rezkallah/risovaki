@@ -212,7 +212,6 @@
   .highlight,
   .product-cards,
   .downloads {
-    margin-bottom: 4rem;
     padding-top: 2rem;
     text-align: left;
   }
@@ -453,14 +452,14 @@
     text-align: left;
   }
 
-  .highlight h2,
-  .lib-section h3 {
+  .highlight h2 {
     font-size: 1.5rem;
     padding: 0 0.5rem;
   }
 
   .lib-section h3 {
-    text-align: center;
+    font-size: 1.5rem;
+    text-align: left;
     margin-right: 0;
   }
 

@@ -1,4 +1,4 @@
-// Auto-generated from https://www.toy123d.com/col.jsp?id=1510
+// 3D models for risovaki
 export const dataSecond = [
   {
     id: 1,
