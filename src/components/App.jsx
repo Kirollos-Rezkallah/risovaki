@@ -6,6 +6,7 @@ import { printers_highlight, printers } from "../data.js";
 import { dataFirst } from "../models-data.js";
 import { dataSecond } from "../models-data-second.js";
 import Downloads from "./Downloads.jsx";
+import Video from "./Video.jsx";
 import Library from "./Library.jsx";
 import Footer from "./Footer.jsx";
 
@@ -43,6 +44,22 @@ function App() {
           heading={"Профессиональные 3D-файлы для Рисоваки"}
           bgColor="var(--color-data-second)"
         />
+
+        <section className="video">
+          <Video
+            heading={"Калибровка и подготовка к работе"}
+            link={
+              "https://rutube.ru/play/embed/d8fdc79ad4e081f1a8f3a8be82f1a559"
+            }
+          />
+          <Video
+            heading={"Калибровка и подготовка к работе"}
+            link={
+              "https://rutube.ru/play/embed/d8fdc79ad4e081f1a8f3a8be82f1a559"
+            }
+          />
+        </section>
+
         <Downloads />
       </main>
 

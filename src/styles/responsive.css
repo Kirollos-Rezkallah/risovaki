@@ -463,6 +463,11 @@
     margin-right: 0;
   }
 
+  .section-head,
+  .video-heading {
+    margin-left: 1rem;
+  }
+
   .highlight p {
     font-size: 1.125rem;
   }
