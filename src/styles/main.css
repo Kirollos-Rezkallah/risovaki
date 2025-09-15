@@ -729,14 +729,16 @@ nav ul li a:active::after {
 
 .video {
   padding-top: 8rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
-  justify-content: space-around;
+  justify-items: center;
+  align-items: start;
 }
 
 .video-item {
-  width: clamp(280px, 44vw, 560px);
+  width: 100%;
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -798,7 +800,7 @@ nav ul li a:active::after {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
@@ -812,8 +814,10 @@ nav ul li a:active::after {
 }
 
 .video-section-title {
-  width: 100%;
+  grid-column: 1 / -1;
   font-size: 1.6rem;
   color: var(--color-text);
-  margin-left: 2rem;
+  margin-left: 3rem;
+  text-align: left;
+  justify-self: start;
 }

@@ -144,6 +144,15 @@
     width: 120px;
     height: 92.5px;
   }
+
+  .video {
+    grid-template-columns: repeat(2, minmax(16rem, 1fr));
+    gap: 1.75rem;
+  }
+
+  .video-item {
+    max-width: 32rem;
+  }
 }
 
 @media (max-width: 74.625rem) {
@@ -352,6 +361,21 @@
     text-align: center;
     font-size: 1.125rem;
   }
+
+  .video {
+    padding-top: 2rem; /* match your mobile rhythm */
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .video-item {
+    max-width: 34rem;
+  }
+
+  .video-section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 48rem) and (min-width: 40.0625rem) {
@@ -464,7 +488,8 @@
   }
 
   .section-head,
-  .video-heading {
+  .video-heading,
+  .video-section-title {
     margin-left: 1rem;
   }
 
@@ -522,5 +547,13 @@
   .downloads .text-button {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .video {
+    gap: 1rem;
+  }
+
+  .video-item {
+    max-width: 100%;
   }
 }
