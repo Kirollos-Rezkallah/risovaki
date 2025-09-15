@@ -35,7 +35,7 @@ export default function Nav() {
             <a href="#3d-models">3D модели</a>
           </li>
           <li>
-            <a href="#">Видео</a>
+            <a href="#video">Видео</a>
           </li>
           <li>
             <a href="#downloads">Инструкции & Контакты</a>
@@ -72,7 +72,7 @@ export default function Nav() {
               </a>
             </li>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
+              <a href="#video" onClick={() => setMenuOpen(false)}>
                 Видео
               </a>
             </li>

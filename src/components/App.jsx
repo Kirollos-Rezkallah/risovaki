@@ -9,6 +9,8 @@ import Downloads from "./Downloads.jsx";
 import Video from "./Video.jsx";
 import Library from "./Library.jsx";
 import Footer from "./Footer.jsx";
+import thumbnail_1 from "../assets/risovaki-thumbnail-1.jpg";
+import thumbnail_2 from "../assets/risovaki-thumbnail-2.jpg";
 
 function App() {
   return (
@@ -45,17 +47,20 @@ function App() {
           bgColor="var(--color-data-second)"
         />
 
-        <section className="video">
+        <section className="video" id="video">
+          <h3 className="video-section-title">Видеоинструкции</h3>
           <Video
             heading={"Калибровка и подготовка к работе"}
+            poster={thumbnail_1}
             link={
               "https://rutube.ru/play/embed/d8fdc79ad4e081f1a8f3a8be82f1a559"
             }
           />
           <Video
             heading={"Калибровка и подготовка к работе"}
+            poster={thumbnail_2}
             link={
-              "https://rutube.ru/play/embed/d8fdc79ad4e081f1a8f3a8be82f1a559"
+              "https://rutube.ru/play/embed/22d5c31790dfca36da9c1d0a97aca9c1"
             }
           />
         </section>

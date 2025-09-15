@@ -1,18 +1,45 @@
-export default function Video({ link, heading }) {
-  return (
-    <figure className="video-item">
-      {heading && <figcaption className="video-heading">{heading}</figcaption>}
+import { useState, useMemo } from "react";
 
-      {/* 16:9 responsive box */}
+export default function Video({ link, poster }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const autoplayLink = useMemo(() => {
+    try {
+      const url = new URL(link);
+      url.searchParams.set("autoplay", "1");
+      url.searchParams.set("mute", "1");
+      url.searchParams.set("playsinline", "1");
+      return url.toString();
+    } catch {
+      return link;
+    }
+  }, [link]);
+
+  return (
+    <div className="video-item">
       <div className="video-frame">
-        <iframe
-          src={link}
-          title={typeof heading === "string" ? heading : "Video"}
-          allow="clipboard-write; autoplay"
-          allowFullScreen
-          style={{ border: "none", borderRadius: "15px" }}
-        />
+        {!isPlaying ? (
+          <button
+            className="video-thumb"
+            type="button"
+            onClick={() => setIsPlaying(true)}
+            aria-label="Play video">
+            <img
+              src={poster}
+              alt="Video thumbnail"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
+        ) : (
+          <iframe
+            src={autoplayLink}
+            title="Video"
+            allow="clipboard-write; autoplay"
+            allowFullScreen
+          />
+        )}
       </div>
-    </figure>
+    </div>
   );
 }
