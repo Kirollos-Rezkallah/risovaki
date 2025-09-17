@@ -550,7 +550,8 @@
   }
 
   .video {
-    gap: 1rem;
+    gap: 2rem;
+    padding-top: 8rem;
   }
 
   .video-item {

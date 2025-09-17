@@ -17,7 +17,12 @@ export default function Header() {
           Выбрать модель
         </Button>
       </div>
-      <img className="fade-in-left delay-2" src={heroImg} alt="hero image" />
+      <img
+        className="fade-in-left delay-2"
+        src={heroImg}
+        alt="hero image"
+        draggable={false}
+      />
     </header>
   );
 }
