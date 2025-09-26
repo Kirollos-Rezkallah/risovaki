@@ -44,7 +44,24 @@ body {
   padding-top: 8.5rem;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
 html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background);
+  scrollbar-width: auto;
   overflow-x: hidden;
 }
 
@@ -644,6 +661,9 @@ nav ul li a:active::after {
   padding: 1.5rem;
   height: 570px;
   overflow-y: auto;
+
+  scrollbar-color: var(--color-accent) var(--color-background);
+  scrollbar-width: auto;
 }
 
 .lib-list {
